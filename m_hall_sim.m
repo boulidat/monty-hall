@@ -53,6 +53,11 @@ display(sprintf('The trials are over!\nThe number of trials performed were: %d\n
 xaxis = 1:number_of_games;
 figure;
 plot(xaxis,probability_of_success,'LineWidth', 2,'Color',[0,0.7,0.9]);
+if strategy == 1
+    title('Probability with switching door strategy');
+else
+    title('Probability with no-switching door strategy');
+end
 xlabel('Number of games played');
 ylabel('Probability of winning the car');
 hold on;
